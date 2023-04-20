@@ -12,21 +12,13 @@ app.set('views', './views');
 
 app.get('/', (req, res)=>{
     console.log('/ get start ejs test...');
-    res.render('ejsex02',{
-        jemok : 'ejs 제목 데이터',
-        count : 5,   //변수명, 값을 넘겨줌
-        hakbun : 3212,
-        name : '임채영'
-    });  //10번째 줄에 ejs라고 지정했기 때문에 ejsex02.ejs가 아니라 ejsex로 써도 된다.
-    //views를 사용했기 때문에 아래 코드를 실행할 필요가 없다.
-    // fs.readFile('ejsex01.ejs','utf-8', (err, data)=>{
-    //    if(err){
-    //         console.log("파일 읽기 에러"+err);
-    //    } else {
-    //         res.send(ejs.render(data));
-    //    }
-        
-    // });  
+    res.render('ejsex03',{
+        dataArr:[
+            '0번째 인덱스는 처음데이터',
+            '1번째 인덱스는 두번째데이터',
+            '2번째 인덱스는 세번째데이터입니다.'
+        ]
+    });
         
 });
 
