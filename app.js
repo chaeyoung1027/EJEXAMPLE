@@ -14,9 +14,11 @@ app.get('/', (req, res)=>{
     console.log('/ get start ejs test...');
     res.render('ejsex03',{
         dataArr:[
-            '0번째 인덱스는 처음데이터',
-            '1번째 인덱스는 두번째데이터',
-            '2번째 인덱스는 세번째데이터입니다.'
+            {name:'ive리즈', age : 20},
+            {name:'ive장원영', age : 20},
+            {name:'ive안유진', age : 21},
+            {name:'ive레이', age : 19}
+
         ]
     });
         
